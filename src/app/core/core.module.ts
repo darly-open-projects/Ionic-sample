@@ -1,9 +1,17 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
+import { CommonModule } from '@angular/common';
+
+import { IonicModule } from 'ionic-angular';
+import  {MmxHeaderComponent } from './header/header.component';
 
 
 @NgModule({
-  imports: [IonicPageModule]
+  declarations: [MmxHeaderComponent],
+  imports: [
+    IonicModule,
+    CommonModule,
+  ],
+  exports: [MmxHeaderComponent],
 })
 export class CoreModule {
 }

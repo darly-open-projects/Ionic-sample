@@ -1,0 +1,12 @@
+<ion-navbar>
+  <ion-row>
+    <ion-title>
+      <img class="mmx-logo" src="../assets/imgs/logo.png"> <span class="mmx-title">{{title | uppercase}}</span>
+    </ion-title>
+    <ion-list>
+      <button *ngFor="let button of buttons" class="mmx-nav-button" (click)="goToPage(button.component)" ion-button>
+        <ion-icon [name]="button.icon"></ion-icon>
+      </button>
+    </ion-list>
+  </ion-row>
+</ion-navbar>
