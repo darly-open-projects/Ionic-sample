@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../../module-home/home.component';
 import { ChannelPage } from '../../module-channel/channel.component';
-import {UserSettingsPage} from '../../module-user/user.component';
+import { UserSettingsPage } from '../../module-user/user.component';
 
 @Component({
   selector: 'mmx-header',

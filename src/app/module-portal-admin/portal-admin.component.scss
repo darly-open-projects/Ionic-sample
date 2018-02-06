@@ -1,0 +1,16 @@
+portal-admin {
+  .mmx-tab-button {
+    height: 80px;
+    margin-left: 10px;
+    border-radius: 0;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    span {
+      margin-top: 25px;
+      display: block;
+    }
+    mmx-tab-icon {
+      margin: 3px;
+    }
+  }
+}

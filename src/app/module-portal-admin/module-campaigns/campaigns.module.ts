@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from 'ionic-angular';
 
+import { CampaignsPage } from './campaigns.component';
 
 @NgModule({
-  imports: [IonicPageModule]
+  declarations: [CampaignsPage],
+  imports: [
+    IonicModule,
+    CommonModule,
+  ],
+  exports: [CampaignsPage],
 })
 export class CampaignsModule {
 }
