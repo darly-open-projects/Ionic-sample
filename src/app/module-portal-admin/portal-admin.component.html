@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <img class="mmx-logo" src="../assets/imgs/logo.png">
+      <button class="mmx-tab-button" *ngFor="let button of buttons" (click)="showPage(button.component)" ion-button>
+        <ion-icon class="mmx-tab-icon" [name]="button.icon"></ion-icon>
+        <div>{{button.title}}</div>
+      </button>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <page-campaigns *ngIf="page === 'Campaigns Page'"></page-campaigns>
+  <page-distribution *ngIf="page === 'Distribution Page'"></page-distribution>
+</ion-content>
