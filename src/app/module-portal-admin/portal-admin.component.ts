@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-// import { CampaignsPage } from './module-campaigns/campaigns.component';
-// import { DistributionPage } from './module-distribution/distribution.component';
+import { Store } from '@ngrx/store';
+import * as rootReducer from '../app.reducer';
+
+import { PageService } from '../core/services/page.service';
 
 @Component({
   selector: 'portal-admin',
@@ -18,10 +20,19 @@ export class PortalAdminPage {
     {icon: 'person', title: 'My Profile', component: 'Distribution Page'},
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              private store: Store<rootReducer.State>,
+              private pageService: PageService) {
+    this.store.select('portalAdmin')
+      .subscribe((response: {data: string}) => {
+        if (!response.data) {
+          return;
+        }
+        this.page = response.data;
+      })
   }
 
-  showPage(page) {
-    this.page = (page) ? page : 'Campaigns Page';
+  showPage(page: string) {
+    this.pageService.setPage(page);
   }
 }
